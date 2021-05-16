@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace BooksApi.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class BooksController : ControllerBase
     {
         private readonly BookService _bookService;
