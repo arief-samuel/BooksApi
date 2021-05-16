@@ -30,7 +30,9 @@ namespace BooksApi
             services.Configure<BookstoreDatabaseSettings>(Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
 
             services.AddSingleton<IBookstoreDatabaseSettings>(sp => sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
-            
+
+            services.AddSingleton<BookService>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
